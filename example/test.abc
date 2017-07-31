@@ -1,0 +1,33 @@
+% ABC notation for midi generation file
+%%topmargin 80
+% X = Song Index
+X: 1
+% L = Default Lenght
+L: 1/4
+% T = Title
+T: A big example
+% Q = Tempo
+Q: 70
+% C = Composer
+C: A GNU tool
+% S = Source
+S: ABCGen V2
+% Z = Transcriber
+Z: ABCGen V2
+% M = Meter
+M: 3/4
+% K = Key 
+K: C clef=G
+% P = Parts, A, A, B, etc.
+P: A
+% W = Words
+W: man, this is easy...
+% V = Clef
+V: 1
+Z|G/2A/2 B/4z/4 G/2 F| (3F/2-F/2^F/2 A c|e- z e/2>d/2 | z z/2f/2 f/2<^g/2- |g z/2 ^a/2 z/4g/4 z/2 |a- a/2<f/2 f| f/4z/4 z/2 z/2 z/2 a/2-a/2|f/4d/4e/4g/4 a z/2a/2 | z/2 z/2 b/4z/4 a/2 z | ^g/4z/4 e/4c/4 B B-| B/4G/4z/2 E C/2D/2|^C/2E/2 D z |B,/2C/2 D E-| (3E/2^D/2D/2 z/2B,/2 z |B, z z |D- z/2 z/4D/4 F| z/2 z/4D/4 B, D/2>F/2 |A/2 c/4z/4 c/4z/4 z/2 c/2 z/4d/4 | d/2>f/2 z (3f/2a/2-a/2 |]
+V: 2
+%%MIDI channel 10
+%%MIDI program 10
+%%MIDI transpose -25
+K: C
+A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|A A A|]

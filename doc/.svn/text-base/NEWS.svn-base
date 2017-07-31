@@ -1,0 +1,52 @@
+NOTES
+=====
+Notes on fix release 1.0-8.fc13
+
+* Wed Jul 1 2010 Rodolfo Alcazar <rodolfoap@gmail.com> 1.0-8
+- Fixes: minor syscommand fixes
+
+Notes on fifth release 1.0-7.fc13
+
+- Fifth release signed 1.0-7
+- Fixes: minor bugs in system command
+-        Spec file with some Willy Cat <siamwilly@yahoo.com.ar> suggestions
+- Adds: Graphic user interface
+
+Notes on fourth release 0.9-2
+
+- Fixes: A couple of bugs
+- Uses evince instead of acroread, timidity as player, not needed wav or mp3 files for exercises starting
+- Faster generation and action
+- Fedora 8 ready, avoid many dependences, rpm process generation improved
+- Stages generation improved
+- Pulseaudio not fixed in timidity, but abcmusiex now working fine with default device.
+
+Notes on third release 0.8-2:
+
+- Third release signed 0.8-2
+- Sharps and flats generation;
+- Ties (legatos) generation.
+
+Notes on second release 0.8:
+
+- Second release signed 0.8
+
+Just some very useful fixes: 
+
+- Controlling generation stages;
+- Updated documentation and manpage;
+- Better generation tools;
+- Metronom optional;
+- Randomizer bug fixed;
+- Dispersion fixed;
+- Interface standardization.
+
+Notes on first release 0.7-1:
+
+- This release is created on C so then it can be appended with some open code from other abc suite software.
+- Must have bugs. Just tested with some examples.
+- Code does not validate any parameter entry.
+- The program make some shell calls to other abc software, xpdf viewer and audio converters.
+- The program just generates an abc file which then is converted to many formats. It is really simple.
+
+Thanks to ABC standard writers and ABCPlus codemakers. Thanks to SourceForge, as always. If you have any doubt or wanna help me improve this work, just drop me a line.

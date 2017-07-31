@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<interface>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">28</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">10</property>
+    <property name="value">2</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment2">
+    <property name="upper">28</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">10</property>
+    <property name="value">21</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment3">
+    <property name="upper">290</property>
+    <property name="lower">10</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">10</property>
+    <property name="value">60</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment4">
+    <property name="upper">1024</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">10</property>
+    <property name="value">100</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment5">
+    <property name="upper">20</property>
+    <property name="lower">1</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">10</property>
+    <property name="value">3</property>
+  </object>
+  <object class="GtkListStore" id="model1">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">2</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">3</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">4</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="model2">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">2</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">4</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">8</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="model3">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">1 - 1/2s</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">2 - 1/4s</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">3 - 1/8s</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">4 - 1/16s</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="model4">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">C</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">C#</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Db</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">D</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">D#</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Eb</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">E</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">F</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">F#</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Gb</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">G</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">G#</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Ab</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">A</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">A#</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Bb</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">B</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="model5">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">treble</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">alto</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">tenor</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">baritone</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">bass</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">mezzo</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">soprano</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">perc</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">none</col>
+      </row>
+    </data>
+  </object>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="window1">
+    <property name="tooltip-text" translatable="yes">ABCMusiex</property>
+    <property name="title" translatable="yes">ABCMusiex</property>
+    <property name="window_position">center</property>
+    <signal handler="on_window1_destroy" name="destroy"/>
+    <child>
+      <object class="GtkTable" id="table1">
+        <property name="visible">True</property>
+        <property name="n_rows">12</property>
+        <property name="n_columns">6</property>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Tempo for generated song</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Tempo: </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Level: 
+1 generates halves
+2 generates fourths
+3 generates eights
+4 generates 1/16s</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Level: </property>
+          </object>
+          <packing>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label3">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Key signature</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Key: </property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="right_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label4">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Clef: C, G or F</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Clef: </property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="right_attach">3</property>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label5">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Time signature denominator
+(i.e. the '3' in 3/4)</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Beats: </property>
+          </object>
+          <packing>
+            <property name="left_attach">4</property>
+            <property name="right_attach">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label6">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Time signature denominator
+(i.e. the '8' in 3/8)</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Width: </property>
+          </object>
+          <packing>
+            <property name="left_attach">4</property>
+            <property name="right_attach">5</property>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label7">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Number of generated bars</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Quantity: </property>
+          </object>
+          <packing>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label8">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Distance between each note generated and the next, in semitones</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Dispersion: </property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="right_attach">3</property>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label9">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Minimum generated note (low-low-c is 0)
+maximum generated note (high-high-c is 28)
+</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Min/Max: </property>
+          </object>
+          <packing>
+            <property name="left_attach">4</property>
+            <property name="right_attach">5</property>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVBox" id="vbox1">
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkComboBox" id="cBeats">
+                <property name="visible">True</property>
+                <property name="tooltip-text" translatable="yes">Time signature denominator
+(i.e. the '3' in 3/4)</property>
+                <property name="active">2</property>
+                <property name="model">model1</property>
+                <child>
+                  <object class="GtkCellRendererText" id="renderer1"/>
+                  <attributes>
+                    <attribute name="text">0</attribute>
+                  </attributes>
+                </child>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHSeparator" id="hseparator1">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBox" id="cWidth">
+                <property name="visible">True</property>
+                <property name="tooltip-text" translatable="yes">Time signature denominator
+(i.e. the '8' in 3/8)</property>
+                <property name="active">1</property>
+                <property name="model">model2</property>
+                <child>
+                  <object class="GtkCellRendererText" id="renderer2"/>
+                  <attributes>
+                    <attribute name="text">0</attribute>
+                  </attributes>
+                </child>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">5</property>
+            <property name="right_attach">6</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkSpinButton" id="sMin">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="tooltip-text" translatable="yes">Minimum generated note (low-low-c is 0)</property>
+                <property name="invisible_char">&#x25CF;</property>
+                <property name="adjustment">adjustment1</property>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label10">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">/</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="sMax">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="tooltip-text" translatable="yes">Maximum generated note (high-high-c is 28)
+</property>
+                <property name="invisible_char">&#x25CF;</property>
+                <property name="adjustment">adjustment2</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">5</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xTriplets">
+            <property name="label" translatable="yes">Triplets</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Generate triplets?</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xDots">
+            <property name="label" translatable="yes">Dots</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Generate dotted notes?</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xMetro">
+            <property name="label" translatable="yes">Metro</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Play metronom in background?</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">4</property>
+            <property name="bottom_attach">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xRests">
+            <property name="label" translatable="yes">Rests</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Generate rests?</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="right_attach">4</property>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xLegato">
+            <property name="label" translatable="yes">Legatos</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Generate legatos (ties)?</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="right_attach">4</property>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xSharps">
+            <property name="label" translatable="yes">Sharps</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Generate sharps (could get lead to confusion depending on the key signature)?</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">5</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="xFlats">
+            <property name="label" translatable="yes">Flats</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="tooltip-text" translatable="yes">Generate flats (could get lead to confusion depending on the key signature)?</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">5</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label11">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Title for paper sheet, front page, center</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Sheet title: </property>
+          </object>
+          <packing>
+            <property name="top_attach">6</property>
+            <property name="bottom_attach">7</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label12">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Author for paper sheet, front page, upper right</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Author: </property>
+          </object>
+          <packing>
+            <property name="top_attach">7</property>
+            <property name="bottom_attach">8</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label13">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Comments for paper sheet, last page, lower left below the score</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Comments: </property>
+          </object>
+          <packing>
+            <property name="top_attach">8</property>
+            <property name="bottom_attach">9</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label14">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Generated filename pattern (will overwrite previous exercises with the same name)...</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">Output filename: </property>
+          </object>
+          <packing>
+            <property name="top_attach">9</property>
+            <property name="bottom_attach">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="eTitle">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Title for paper sheet, front page, center</property>
+            <property name="invisible_char">&#x25CF;</property>
+            <property name="text" translatable="yes">Exercise</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">6</property>
+            <property name="bottom_attach">7</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="eAuthor">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Author for paper sheet, front page, upper right</property>
+            <property name="invisible_char">&#x25CF;</property>
+            <property name="text" translatable="yes">ABCMusiex</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">7</property>
+            <property name="bottom_attach">8</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="eComments">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Comments for paper sheet, last page, lower left below the score</property>
+            <property name="invisible_char">&#x25CF;</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">8</property>
+            <property name="bottom_attach">9</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="eOutput">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Generated filename pattern (will overwrite previous exercises with the same name)...</property>
+            <property name="invisible_char">&#x25CF;</property>
+            <property name="text" translatable="yes">exercise</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">9</property>
+            <property name="bottom_attach">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHButtonBox" id="hbuttonbox1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkButton" id="bSsh">
+                <property name="label" translatable="yes">Sssh!</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip-text" translatable="yes">Silence currently played song by killing timidity</property>
+                <signal handler="on_bSsh_clicked" name="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bSave">
+                <property name="label">gtk-save</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip-text" translatable="yes">Saves config in ~/.abcmusiex/abcmusiex.conf</property>
+                <property name="use_stock">True</property>
+                <signal handler="on_bSave_clicked" name="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bOk">
+                <property name="label">gtk-media-play</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip-text" translatable="yes">Runs abcmusiex with all shown parameters</property>
+                <property name="use_stock">True</property>
+                <signal handler="on_bOk_clicked" name="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bClose">
+                <property name="label">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip-text" translatable="yes">Close abcmusiex</property>
+                <property name="use_stock">True</property>
+                <signal handler="on_bClose_clicked" name="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">6</property>
+            <property name="top_attach">11</property>
+            <property name="bottom_attach">12</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="sTempo">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Tempo for generated song</property>
+            <property name="invisible_char">&#x25CF;</property>
+            <property name="adjustment">adjustment3</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="cLevel">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Level: 
+1 generates halves
+2 generates fourths
+3 generates eights
+4 generates 1/16s</property>
+            <property name="editing_canceled">True</property>
+            <property name="active">1</property>
+            <property name="model">model3</property>
+            <child>
+              <object class="GtkCellRendererText" id="renderer3"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="cKey">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Key signature</property>
+            <property name="active">0</property>
+            <property name="model">model4</property>
+            <child>
+              <object class="GtkCellRendererText" id="renderer4"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="right_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="cClef">
+            <property name="visible">True</property>
+            <property name="tooltip-text" translatable="yes">Clef: C, G or F</property>
+            <property name="active">0</property>
+            <property name="model">model5</property>
+            <child>
+              <object class="GtkCellRendererText" id="renderer5"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="right_attach">4</property>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="sQuantity">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Number of generated bars</property>
+            <property name="invisible_char">&#x25CF;</property>
+            <property name="adjustment">adjustment4</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="sDispersion">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip-text" translatable="yes">Distance between each note generated and the next, in semitones</property>
+            <property name="invisible_char">&#x25CF;</property>
+            <property name="adjustment">adjustment5</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="right_attach">4</property>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

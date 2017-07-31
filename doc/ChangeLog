@@ -1,0 +1,46 @@
+* Mon May 1 2013 Rodolfo Alcazar <rodolfoap@gmail.com> 1.0-9
+- Merging ABCMidi needed modules due to the lack of Fedora RPM
+
+* Wed Jul 1 2010 Rodolfo Alcazar <rodolfoap@gmail.com> 1.0-8
+- Fixes: minor syscommand fixes
+
+* Wed Jun 23 2010 Rodolfo Alcazar <rodolfoap@gmail.com> 1.0-7
+- Fifth release signed 1.0-7
+- Fixes: minor bugs in system command
+-        Spec file with some Willy Cat <siamwilly@yahoo.com.ar> suggestions
+- Adds: Graphic user interface
+
+* Tue Jun 17 09:02:17 2008 Rodolfo Alcazar <rodolfoap@gmail.com>
+- Fifth release signed 0.9-5
+- Fixes: using yaps instead of abcm2ps
+
+* Fri Dec 28 09:44:37 2007 Rodolfo Alcazar <rodolfoap@gmail.com>
+— Fourth release signed 0.9-2
+- Fixes: A couple of bugs
+-        Uses evince instead of acroread, timidity as player, not needed wav
+	 or mp3 files for exercises starting
+-        Faster generation and action
+-        Fedora 8 ready, avoid many dependences, rpm process generation improved
+-        Stages generation improved
+-        Pulseaudio not fixed in timidity, but abcmusiex now working fine with
+	 default device.
+
+* Tue Apr  4 16:00:00 2006 Rodolfo Alcazar <rodolfoap@gmail.com>
+— Third release signed 0.8-2
+- Fixes: Generation algorithms improved;
+-        Sharps and flats generator;
+-        Ties generator.
+
+* Thu Mar 23 15:00:00 2006 Rodolfo Alcazar <rodolfoap@gmail.com>
+— Second release signed 0.8
+- Fixes: Controlling generation stages;
+-        Updated documentation and manpage;
+-        Better generation tools;
+-        Metronom optional;
+-        Randomizer bug fixed;
+-        Dispersion fixed;
+-        Interface standardization.
+
+* Mon Aug 22 16:00:00 2005 Rodolfo Alcazar <rodolfoap@gmail.com>
+— First release signed 0.7.
+

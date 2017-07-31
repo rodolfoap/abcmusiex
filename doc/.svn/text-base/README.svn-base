@@ -1,23 +1,27 @@
-![ABCMusiEx](https://github.com/rodolfoap/abcmusiex/blob/master/img/toplogo.jpg)
+ABCMusiEX
+=========
+(Updated Thu Jun 24 19:46:55 2010)
 
-# abcmusiex
-ABCMusiEx generates sight reading exercises: ABCs, printable PS/PDFs, audio WAV/MP3. Student read and practice generated scores while abcmusiex backing track follows at different speeds. Highly configurable and easy.
+ABCMusic Reading Exercises generate music score sight reading exercises.
 
-![simpleexercise.jpg](https://github.com/rodolfoap/abcmusiex/blob/master/img/simpleexercise.jpg)
+Based upon ABC Music Notation Standard, the executable generates an ABC file, which is converted
+to printable PS (and optionally) PDF files. (Optionally) WAV and MP3 are also created to allow 
+student play the exercises on a audio player (CD, PC) while he plays the printed exercises on his
+own instrument.
 
-Based upon ABC Music Notation Standard, the executable generates an ABC file, which is converted to printable PS (and optionally) PDF files. (Optionally) WAV and MP3 are also created to allow student play the exercises on a audio player (CD, PC) while he plays the printed exercises on his own instrument.
-
-Output is highly configurable: allows triplets, rests, dotted notes, note ranges, notes dispersion (on some instruments very distant notes are difficult to follow), score key, clefs, different times and metrics (4/4, 6/8, you say). Programmed in GNU C. Shoud be portable to other platforms: Unix, OsX, Windows, Solaris, BSD...
+Output is highly configurable: allows triplets, rests, dotted notes, note ranges, notes dispersion
+(on some instruments very distant notes are difficult to follow), score key, clefs, different times
+and metrics (4/4, 6/8, you say). Programmed in GNU C. Shoud be portable to other platforms: Unix, OsX,
+Windows, Solaris, BSD...
 
 Includes a simple GUI.
 
-![gui.jpg](https://github.com/rodolfoap/abcmusiex/blob/master/img/gui.jpg)
-
-## Installing
+INSTALLING
+==========
 
 A) GENERAL INSTRUCTIONS
 
-Yum fixes all dependencies, I hope (please find the packages on the [sourceforge ABCMusiEX site](https://sourceforge.net/projects/abcmusiex/files/)).
+Yum fixes all dependencies, I hope.
 
 Just in case, you need this executables on your path:
         - abc2midi      (http://abc.sourceforge.net/abcMIDI/)
@@ -30,96 +34,76 @@ Just in case, you need this executables on your path:
 B) TARBALL
 
 If you downloaded a tar file, untar it with
-```
+
 # tar xvfz abcmusiex-x.x-x.tz (replace x's with the right version numbers)
 # cd abcmusiex-x.x-x
 # ./configure
 # make
 # make install
-```
+
 test it with
 
-```
 # abcmusiex --version
-```
 
 C) RPM FILE
 
-```
 # rpm -ivh abcmusiex-x.x-x.i686.rpm
-```
 
 D) BINARY FILES
 
 Just copy executables to a bin directory on you path, say /usr/bin/local/
 (must be logged as root)
 
-```
 # cp abc* /usr/bin/local
-```
 
-## Using: Learn Music reading
+USING: LEARN MUSIC READING
+==========================
 
 Search the gnome menu, in the "Education" folder. There you can find the graphic interface.
 
 Or, you can call the gui with 
 
-```
 $ abcmusiex-gui
-```
 
 Generate some exercises and start practicing. What are you for in this life?
 
-```
 $ abcmusiex --t 50 --k G --n 150 --l 3 --triplets --rests --min 7 --max 21 --T "My First Musical Studying Lesson" --C "John Doe" --W "Many, many thanks to free software."
-```
 
 That will generate a studying lesson. If you want audio (wav and mp3) and printable parts (postscript ps and PDF), use "--stage 7". The generated exercise has this characteristics: tempo 50, G key, 150 bars of reading, --l 3 stands for only use halves, fourths and eights, triplets, rests, from low C (7) to high C (21) with the title "My First Musical Studying Lesson", author "John Doe", and final comments "Many, many thanks to free software.".
 
 Probably you will see something like:
 
-```
 -rw-rw-r--   1 rodolfoap rodolfoap  46K Aug 26 13:28 exercise.ps
 -rw-rw-r--   1 rodolfoap rodolfoap 4.3K Aug 26 13:28 exercise.abc
 -rw-rw-r--   1 rodolfoap rodolfoap  70K Aug 26 13:28 exercise.pdf
 -rw-rw-r--   1 rodolfoap rodolfoap  11K Aug 26 13:28 exercise.mid
 -rw-r--r--   1 rodolfoap rodolfoap 3.2M Aug 26 13:28 exercise.wav
 -rw-rw-r--   1 rodolfoap rodolfoap  28K Aug 26 13:28 exercise.mp3
-```
 
 See more options with
 
-```
 # abcmusiex --help
-```
 
 Another way of using it:
 
-```
 $ abcmusiex --stage 1
-```
 
 That line generates only .abc and .mid files. Then you can use ABC note editor or Finale for Windows and start practicing easily, no printing and mp3 playing. If you use linux... Did you know Finale 2006 installs fine on Wine? You can use any score player: Rosegarden, ABC Noteedit...
 
 You can see all options:
 
-```
 # man abcmusiex
-```
 
-![dbkeyexercise1.jpg](https://github.com/rodolfoap/abcmusiex/blob/master/img/dbkeyexercise1.jpg)
-![screenshot.jpg](https://github.com/rodolfoap/abcmusiex/blob/master/img/screenshot.jpg)
-
-## Notes
-
-#### Notes on fifth release 1.0-7.fc13
+NOTES
+=====
+Notes on fifth release 1.0-7.fc13
 
 - Fifth release signed 1.0-7
 - Fixes: minor bugs in system command
 -        Spec file with some Willy Cat <siamwilly@yahoo.com.ar> suggestions
 - Adds: Graphic user interface
 
-#### Notes on fourth release 0.9-2:
+Notes on fourth release 0.9-2:
 
 - Fixes: A couple of bugs
 - Uses evince instead of acroread, timidity as player, not needed wav or mp3 files for exercises starting
@@ -128,17 +112,17 @@ You can see all options:
 - Stages generation improved
 - Pulseaudio not fixed in timidity, but abcmusiex now working fine with default device.
 
-#### Notes on third release 0.8-2:
+Notes on third release 0.8-2:
 
 - Third release signed 0.8-2
 - Sharps and flats generation;
 - Ties (legatos) generation.
 
-#### Notes on second release 0.8:
+Notes on second release 0.8:
 
 - Second release signed 0.8
 
-#### Just some very useful fixes: 
+Just some very useful fixes: 
 
 - Controlling generation stages;
 - Updated documentation and manpage;
@@ -148,7 +132,7 @@ You can see all options:
 - Dispersion fixed;
 - Interface standardization.
 
-#### Notes on first release 0.7-1:
+Notes on first release 0.7-1:
 
 - This release is created on C so then it can be appended with some open code from other abc suite software.
 - Must have bugs. Just tested with some examples.
@@ -156,12 +140,13 @@ You can see all options:
 - The program make some shell calls to other abc software, xpdf viewer and audio converters.
 - The program just generates an abc file which then is converted to many formats. It is really simple.
 
-#### Thanks to ABC standard writers and ABCPlus codemakers. Thanks to SourceForge, as always. If you have any doubt or wanna help me improve this work, just drop me a line.
+Thanks to ABC standard writers and ABCPlus codemakers. Thanks to SourceForge, as always. If you have any doubt or wanna help me improve this work, just drop me a line.
 
-## TODO
+TODO
+====
 
 - Sharps and Flats? Are they necessary?
 - Is getopt really necessary? If so, parse options with it.
 
-RodolfoAP (http://ydor.org)
+Rodolfo Alcazar <rodolfoap@gmail.com>
 
