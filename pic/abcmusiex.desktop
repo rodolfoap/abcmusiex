@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=ABCMusiEX
+Name[es]=ABCMusiEX
+GenericName=ABCMusiEX exercises generator
+GenericName[es]=ABCMusiEX generador de ejercicios
+Comment=Improve your score reading skills
+Comment[es]=Desarrolla tus habilidades de lectura musical
+Exec=abcmusiex-gui
+Icon=/usr/share/abcmusiex/abcmusiex.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;Audio;AudioVideo;Music;Education;X-Notation;
+Version=1.0
+X-Desktop-File-Install-Version=0.15
